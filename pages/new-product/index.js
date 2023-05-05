@@ -7,7 +7,7 @@ import Head from "next/head";
 const NewProductPage = () => {
   const router = useRouter()
   async function addProductHandler(entereddata){
-   const res = await axios.post("http://localhost:3000//api/products",entereddata , {
+   const res = await axios.post("/api/products",entereddata , {
      headers: {"Content-Type":"application/json"}
     })
     router.push('/')
